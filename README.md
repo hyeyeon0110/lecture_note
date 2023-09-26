@@ -31,8 +31,8 @@ It can be used in a number of different ways.
 - ../[directory name]: relative path
 
 #### options
--l: show detailed information (long format)
--lh: same as above, but size in units
+- -l: show detailed information (long format)
+- -lh: same as above, but size in units
 
 ---
 
