@@ -1,0 +1,120 @@
+# Lecture_note_5
+
+---
+
+## I/O Redirection
+### Standard Output
+#### >: to create and save the output in a file
+#### cat: displays the content of a text file
+
+```
+$ ls -lh > new_file_name
+$ cat new_file_name
+```
+
+#### >>: appends output to an extising file or create and write to a new file
+
+``` 
+$ ls -lh >> new_file_name
+$ cat new_file_name
+```
+
+---
+
+### Standard Input
+#### sort < file_name > new_file_name: sorting the words in a file
+
+```
+$ cat words.txt
+school
+class
+home
+new
+lecture
+$ sort < words.txt > sorted_words.txt
+$ cat sorted_words.txt
+class
+home
+lecture
+new
+school
+```
+
+#### command1 | command2 | command3 | ...: Next output of previous command to input of next command
+
+#### ls | wc -l: knowing how many files there are
+
+--- 
+
+## Expansion
+### echo
+
+```
+$ echo print out the text
+print out the text
+```
+```
+$ echo *
+~whole files list~
+```
+```
+$ echo ~name
+/home/name
+```
+
+--- 
+
+## Permissions
+Files and directories have a permission assigned differently to **owner / group / others**
+
+- **-**(file type)**rwx**(owner)**rwx**(group)**rwx**(others)
+
+```
+$ chmod **600** some_file
+```
+600 = rw-------
+
+- rwxrwxrwx = 111 111 111
+- rwx-rw-rw- = 110 110 110
+- rwx------ = 111 000 000
+...
+
+---
+
+## Changing Permission
+
+```
+$ chmod 644 words.txt
+$ ls -lh
+...
+-rwr--r-- 1 hyeyeon hyeyeon 30 Oct 03 15:58 words.txt
+...
+```
+
+---
+
+## Superuser
+
+```
+$ sudo some_command
+Password for me: 
+```
+
+---
+
+## Shell Script
+
+```
+$ nano myscript.sh
+```
+
+---
+
+### history
+
+```
+$ history > history_command.txt
+$ cat history
+```
+
+
