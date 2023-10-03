@@ -74,13 +74,47 @@ $ chmod **600** some_file
 ```
 600 = rw-------
 
+- rwxrwxrwx = 111 111 111
+- rwx-rw-rw- = 110 110 110
+- rwx------ = 111 000 000
+...
 
+---
 
+## Changing Permission
 
+```
+$ chmod 644 words.txt
+$ ls -lh
+...
+-rwr--r-- 1 hyeyeon hyeyeon 30 Oct 03 15:58 words.txt
+...
+```
 
+---
 
+## Superuser
 
+```
+$ sudo some_command
+Password for me: 
+```
 
+---
 
+## Shell Script
+
+```
+$ nano myscript.sh
+```
+
+---
+
+### history
+
+```
+$ history > history_command.txt
+$ cat history
+```
 
 
